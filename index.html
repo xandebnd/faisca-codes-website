@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Faísca Codes</title>
+</head>
+
+<body class="bg-gray-900 text-white">
+  <header class="bg-[#13161D] border-b border-[#24262D] py-4">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <img src="img/laranja.png" alt="Logo" class="w-16 h-16">
+
+      <button id="menu-toggle" class="lg:hidden text-white text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav id="menu"
+        class="hidden lg:flex gap-10 text-lg flex-col lg:flex-row absolute lg:static bg-[#13161D] lg:bg-transparent w-full left-0 top-16 p-5 lg:p-0 lg:w-auto text-center">
+        <a href="#" class="hover:text-orange-400 transition">Início</a>
+        <a href="#products" class="hover:text-orange-400 transition">Produtos</a>
+        <a href="#" class="hover:text-orange-400 transition">Clientes</a>
+      </nav>
+
+      <a href="#"
+        class="hidden lg:flex items-center gap-2 bg-orange-400 px-5 py-2 rounded-lg hover:bg-orange-500 transition">
+        Entrar em contato <i class="fa-brands fa-discord"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6">
+    <section class="flex flex-col lg:flex-row items-center justify-between py-20">
+      <div class="lg:w-1/2 space-y-6">
+        <h1 class="text-6xl font-light">
+          Sobre a <br>
+          <span class="text-orange-400 font-bold">Faísca Codes</span>
+        </h1>
+        <p class="text-xl font-light leading-relaxed">
+          Somos apaixonados por tecnologia e inovação. Criamos e vendemos
+          <span class="text-orange-400 font-medium">BOTs para Discord</span>
+          que levam automação, funcionalidade e praticidade ao próximo nível.
+        </p>
+        <p class="text-xl font-light leading-relaxed">
+          Nossos BOTs são projetados para atender às necessidades da sua comunidade, simplificando tarefas e ampliando a
+          interatividade. Seja para <span class="text-orange-400 font-medium">diversão, organização ou gestão</span>,
+          estamos aqui para transformar sua experiência no Discord.
+        </p>
+      </div>
+
+      <img src="img/banner.svg" alt="Banner" class="w-full lg:w-1/2 max-w-md mx-auto lg:mx-0">
+    </section>
+
+    <section id="products" class="py-20 text-center">
+      <h2 class="text-5xl font-bold mb-10">
+        Nossos <span class="text-orange-400">BOTs</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-left">
+          <h3 class="text-3xl text-orange-400 font-bold mb-4">Básico</h3>
+          <p class="text-lg">Bot essencial com funcionalidades simples como comandos pré-definidos e respostas
+            automáticas.</p>
+          <p class="text-2xl font-semibold mt-4">R$ 50,00 <span class="text-sm line-through opacity-70">R$ 75,00</span>
+          </p>
+          <button class="w-full mt-4 bg-orange-400 py-2 rounded-lg hover:bg-orange-500 transition">Adquirir</button>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-left">
+          <h3 class="text-3xl text-orange-400 font-bold mb-4">Médio</h3>
+          <p class="text-lg">Inclui moderação, integração com plataformas externas e comandos interativos.</p>
+          <p class="text-2xl font-semibold mt-4">R$ 80,00 <span class="text-sm line-through opacity-70">R$ 95,00</span>
+          </p>
+          <button class="w-full mt-4 bg-orange-400 py-2 rounded-lg hover:bg-orange-500 transition">Adquirir</button>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-left">
+          <h3 class="text-3xl text-orange-400 font-bold mb-4">Completo</h3>
+          <p class="text-lg">Automação completa com sistemas de nível, economia virtual e integração com APIs.</p>
+          <p class="text-2xl font-semibold mt-4">R$ 100,00 <span class="text-sm line-through opacity-70">R$
+              115,00</span></p>
+          <button class="w-full mt-4 bg-orange-400 py-2 rounded-lg hover:bg-orange-500 transition">Adquirir</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#13161D] text-gray-400 py-10 mt-20">
+    <div class="container mx-auto text-center space-y-4">
+      <p class="text-lg">&copy; 2025 Faísca Codes - Todos os direitos reservados.</p>
+      <div class="flex justify-center gap-6 text-xl">
+        <a href="#" class="hover:text-orange-400 transition"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="hover:text-orange-400 transition"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="hover:text-orange-400 transition"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
