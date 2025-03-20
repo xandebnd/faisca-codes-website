@@ -56,7 +56,3 @@ cd faísca-codes
 ## Contribuições
 
 Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou correções para o projeto, sinta-se à vontade para abrir uma issue ou fazer um pull request.
-
----
-
-Esse README pode ser ajustado conforme o seu projeto evolui. Ele oferece uma explicação geral, além de instruções de como configurar e rodar o site localmente.

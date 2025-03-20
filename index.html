@@ -20,12 +20,12 @@
       <img src="img/laranja.png" alt="Logo" class="w-16 h-16">
 
       <button id="menu-toggle" class="lg:hidden text-white text-2xl">
-        <i class="fa-solid fa-bars"></i>
+        <i id="menu-icon" class="fa-solid fa-bars"></i>
       </button>
 
       <nav id="menu"
         class="hidden lg:flex gap-10 text-lg flex-col lg:flex-row absolute lg:static bg-[#13161D] lg:bg-transparent w-full left-0 top-20 p-5 lg:p-0 lg:w-auto text-center">
-        <a href="#" class="hover:text-orange-400 transition">Início</a>
+        <a href="#home" class="hover:text-orange-400 transition">Início</a>
         <a href="#products" class="hover:text-orange-400 transition">Produtos</a>
         <a href="#feedbacks" class="hover:text-orange-400 transition">Clientes</a>
       </nav>
@@ -37,8 +37,8 @@
   </header>
 
   <main class="container mx-auto px-6">
-    <section class="flex flex-col lg:flex-row items-center justify-between py-20" data-aos="fade-down"
-      data-aos-duration="2000">
+    <section id="home" class="flex flex-col lg:flex-row items-center justify-between py-20" data-aos="fade-down"
+      data-aos-duration="1000">
       <div class="lg:w-1/2 space-y-6">
         <h1 class="text-6xl font-light">
           Sobre a <br>
@@ -59,7 +59,7 @@
       <img src="img/banner.svg" alt="Banner" class="w-full lg:w-1/2 max-w-md mx-auto lg:mx-0">
     </section>
 
-    <section id="products" class="py-20 text-center" data-aos="fade-up" data-aos-duration="2000">
+    <section id="products" class="py-20 text-center" data-aos="fade-up" data-aos-duration="1000">
       <h2 class="text-5xl font-bold mb-10">
         Nossos <span class="text-orange-400">BOTs</span>
       </h2>
@@ -91,7 +91,7 @@
         </div>
       </div>
     </section>
-    <section id="feedbacks" class="py-20 text-center" data-aos="zoom-in" data-aos-duration="2000">
+    <section id="feedbacks" class="py-20 text-center" data-aos="zoom-in" data-aos-duration="1000">
       <h2 class="text-5xl font-bold mb-10">Feedbacks dos Clientes</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
@@ -123,9 +123,29 @@
 
   <script>
     document.getElementById("menu-toggle").addEventListener("click", () => {
-      document.getElementById("menu").classList.toggle("hidden");
+      const menu = document.getElementById("menu");
+      const icon = document.getElementById("menu-icon");
+      menu.classList.toggle("hidden");
+
+      if (menu.classList.contains("hidden")) {
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+      } else {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-times");
+      }
     });
-                      AOS.init();
+
+        const menuLinks = document.querySelectorAll("#menu a");
+        menuLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            document.getElementById("menu").classList.add("hidden");
+            document.getElementById("menu-icon").classList.remove("fa-times");
+            document.getElementById("menu-icon").classList.add("fa-bars");
+          });
+    });
+
+        AOS.init();
   </script>
 </body>
 
