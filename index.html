@@ -17,19 +17,13 @@
     <div class="container mx-auto flex justify-between items-center px-6">
       <img src="img/laranja.png" alt="Logo" class="w-16 h-16">
 
-      <button id="menu-toggle" class="lg:hidden text-white text-2xl">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav id="menu"
-        class="hidden lg:flex gap-10 text-lg flex-col lg:flex-row absolute lg:static bg-[#13161D] lg:bg-transparent w-full left-0 top-16 p-5 lg:p-0 lg:w-auto text-center">
+      <nav class="flex gap-10 text-lg">
         <a href="#" class="hover:text-orange-400 transition">Início</a>
         <a href="#products" class="hover:text-orange-400 transition">Produtos</a>
         <a href="#" class="hover:text-orange-400 transition">Clientes</a>
       </nav>
 
-      <a href="#"
-        class="hidden lg:flex items-center gap-2 bg-orange-400 px-5 py-2 rounded-lg hover:bg-orange-500 transition">
+      <a href="#" class="flex items-center gap-2 bg-orange-400 px-5 py-2 rounded-lg hover:bg-orange-500 transition">
         Entrar em contato <i class="fa-brands fa-discord"></i>
       </a>
     </div>
@@ -62,9 +56,10 @@
         Nossos <span class="text-orange-400">BOTs</span>
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Bot Card -->
         <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-left">
           <h3 class="text-3xl text-orange-400 font-bold mb-4">Básico</h3>
-          <p class="text-lg">Funcionalidades simples como comandos pré-definidos e respostas
+          <p class="text-lg">Bot essencial com funcionalidades simples como comandos pré-definidos e respostas
             automáticas.</p>
           <p class="text-2xl font-semibold mt-4">R$ 50,00 <span class="text-sm line-through opacity-70">R$ 75,00</span>
           </p>
@@ -85,6 +80,23 @@
           <p class="text-2xl font-semibold mt-4">R$ 100,00 <span class="text-sm line-through opacity-70">R$
               115,00</span></p>
           <button class="w-full mt-4 bg-orange-400 py-2 rounded-lg hover:bg-orange-500 transition">Adquirir</button>
+        </div>
+      </div>
+    </section>
+    <section id="feedbacks" class="py-20 text-center">
+      <h2 class="text-5xl font-bold mb-10">Feedbacks dos Clientes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <p class="text-lg italic">“O bot básico superou minhas expectativas! Muito fácil de usar e eficiente.”</p>
+          <h4 class="text-orange-400 font-bold mt-4">— João Silva</h4>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <p class="text-lg italic">“Ótima integração e suporte excelente! Recomendo para qualquer servidor.”</p>
+          <h4 class="text-orange-400 font-bold mt-4">— Ana Pereira</h4>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <p class="text-lg italic">“O bot completo tem tudo que eu precisava. Funciona perfeitamente!”</p>
+          <h4 class="text-orange-400 font-bold mt-4">— Carlos Mendes</h4>
         </div>
       </div>
     </section>
