@@ -3,13 +3,8 @@
 
 * {
   font-family: "Poppins", sans-serif;
-  font-style: normal;
 }
 
 html {
   scroll-behavior: smooth;
-}
-body {
-  background-color: #0F1218;
-  color: #fff;
 }

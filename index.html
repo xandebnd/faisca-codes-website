@@ -20,7 +20,7 @@
       <img src="img/laranja.png" alt="Logo" class="w-16 h-16">
 
       <button id="menu-toggle" class="lg:hidden text-white text-2xl">
-        <i id="menu-icon" class="fa-solid fa-bars"></i>
+        <i id="menu-icon" class="fa-solid fa-bars transition-transform duration-500 ease-in-out"></i>
       </button>
 
       <nav id="menu"
@@ -136,16 +136,7 @@
       }
     });
 
-        const menuLinks = document.querySelectorAll("#menu a");
-        menuLinks.forEach(link => {
-          link.addEventListener("click", () => {
-            document.getElementById("menu").classList.add("hidden");
-            document.getElementById("menu-icon").classList.remove("fa-times");
-            document.getElementById("menu-icon").classList.add("fa-bars");
-          });
-    });
-
-        AOS.init();
+      AOS.init();
   </script>
 </body>
 
